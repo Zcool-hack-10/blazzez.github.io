@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="WWp5P2TZKUW7puga6Jb4XlTncPdavNzhj9U4MhpVlTs" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- External Navigation Bar -->
+    <div id="navbar"></div>
+
+    <script>
+        // Load the external navigation bar
+        fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+
+    <header>
+        <h1>Our Services</h1>
+    </header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="create.html">Create</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="blaze.htm">Blazzez</a>
+</nav>
+    <main>
+        <section id="services-list">
+            <h2>What We Offer</h2>
+            <ul>
+                <li><strong>Consulting:</strong> Providing expert advice to improve gaming performance.</li>
+                <li><strong>Implementation:</strong> Helping with the hands-on setup and integration of solutions.</li>
+                <li><strong>Support:</strong> Ongoing assistance to ensure creating continuity.</li>
+                <li><strong>Training:</strong> Empowering your team with the skills they need.</li>
+            </ul>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Blazzez. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
