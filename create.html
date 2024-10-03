@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="WWp5P2TZKUW7puga6Jb4XlTncPdavNzhj9U4MhpVlTs" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Entry</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            margin: 0;
+        }
+
+        .editor {
+            display: flex;
+            flex-grow: 1;
+            height: 90vh;
+        }
+
+        textarea {
+            width: 50%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        iframe {
+            width: 50%;
+            height: 100%;
+            border: none;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <header style="">
+        <h1>Create here</h1>
+    </header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="create.html">Create</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="blaze.htm">Blazzez</a>
+</nav>
+    
+
+</head>
+<body>
+    <h1>Game Code Editor</h1>
+
+    <div class="editor">
+        <textarea id="codeArea" placeholder="Write your HTML, CSS, and JavaScript code here..."></textarea>
+        <iframe id="preview"></iframe>
+    </div>
+
+    <button onclick="runCode()">Run Code</button>
+
+    <script>
+        function runCode() {
+            const code = document.getElementById('codeArea').value;
+            const iframe = document.getElementById('preview').contentWindow.document;
+            iframe.open();
+            iframe.write(code);
+            iframe.close();
+        }
+    </script>
+</body>
+</html>
